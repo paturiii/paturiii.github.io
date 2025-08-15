@@ -1,0 +1,320 @@
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Added background and overscroll behavior to html element */
+        html {
+            background: linear-gradient(135deg,  #6DE1D2, #FFD63A, #FFA955, #F75A5A);
+            overscroll-behavior: none;
+            height: 100%;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #6DE1D2, #FFD63A, #FFA955, #F75A5A);
+            padding: 1rem;
+            /* Added overscroll behavior to prevent bounce effect */
+            overscroll-behavior: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .header h1 {
+            font-size: 4rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            transform: rotate(-1deg);
+        }
+
+        .header p {
+            font-size: 1.25rem;
+            color: rgba(255,255,255,0.9);
+            font-weight: bold;
+        }
+
+        .bento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            grid-auto-rows: minmax(200px, auto);
+        }
+
+        .card {
+            border: 4px solid black;
+            border-radius: 0.5rem;
+            padding: 1.5rem;
+            box-shadow: 8px 8px 0px 0px rgba(0,0,0,1);
+            transition: all 0.2s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translate(4px, 4px);
+            box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+        }
+
+        .card-main {
+            grid-column: span 2;
+            grid-row: span 2;
+            background: linear-gradient(135deg, #fde047, #fb923c);
+        }
+
+        .card-contact {
+            background: linear-gradient(135deg, #86efac, #60a5fa);
+        }
+
+        .card-resume {
+            background: linear-gradient(135deg, #f9a8d4, #c084fc);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .card-social {
+            background: linear-gradient(135deg, #8cdde8, #60a5fa);
+        }
+
+        .card-experience {
+            grid-column: span 2;
+            grid-row: span 2;
+            background: linear-gradient(135deg, #fca5a5, #f9a8d4);
+        }
+
+        .card-stats {
+            background: linear-gradient(135deg, #4ade80, #fde047);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .card-project {
+            background: linear-gradient(135deg, #d8b4fe, #f9a8d4);
+        }
+
+        .card-project-2 {
+            background: linear-gradient(135deg, #86efac, #67e8f9);
+        }
+
+        .card-project-3 {
+            background: linear-gradient(135deg, #fdba74, #f87171);
+        }
+
+        .card-skills {
+            grid-column: span 2;
+            background: linear-gradient(135deg, #a5b4fc, #c084fc);
+        }
+
+        .card-education {
+            grid-column: span 2;
+            background: linear-gradient(135deg, #5eead4, #4ade80);
+        }
+
+        .card-quote {
+            grid-column: span 3;
+            background: linear-gradient(90deg, #a5b4fc, #c084fc, #f9a8d4);
+            text-align: center;
+        }
+
+        .profile-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(45deg, #3b82f6, #8b5cf6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            border: 4px solid black;
+        }
+
+        .card-title {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: black;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .card-subtitle {
+            color: rgba(0,0,0,0.8);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .card-description {
+            color: black;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .badge {
+            display: inline-block;
+            background: black;
+            color: white;
+            padding: 0.25rem 0.5rem;
+            border-radius: 35px;
+            font-size: 0.75rem;
+            font-weight: bold;
+            margin: 0.125rem;
+        }
+
+        .button {
+            background: black;
+            color: white;
+            border: none;
+            padding: 0.75rem 1rem;
+            border-radius: 0.25rem;
+            font-weight: bold;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            transition: background 0.2s;
+            width: 100%;
+            margin-top: 0.5rem;
+        }
+
+        .button:hover {
+            background: #374151;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: black;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+
+        .social-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+
+        .experience-item {
+            background: rgba(0,0,0,0.1);
+            padding: 0.75rem;
+            border-radius: 0.5rem;
+            border: 2px solid black;
+            margin-bottom: 0.75rem;
+        }
+
+        .experience-title {
+            font-weight: 900;
+            color: black;
+        }
+
+        .experience-company {
+            color: rgba(0,0,0,0.8);
+            font-weight: 600;
+        }
+
+        .experience-description {
+            font-size: 0.875rem;
+            color: black;
+            font-weight: 500;
+            margin-top: 0.5rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .skill-category h4 {
+            font-weight: bold;
+            color: black;
+            margin-bottom: 0.5rem;
+        }
+
+        .stats-number {
+            font-size: 2rem;
+            font-weight: 900;
+            color: black;
+        }
+
+        .stats-label {
+            font-size: 0.875rem;
+            font-weight: bold;
+            color: black;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            color: white;
+            font-weight: bold;
+            font-size: 1.125rem;
+        }
+
+        .icon {
+            width: 1.25rem;
+            height: 1.25rem;
+            display: inline-block;
+        }
+
+        .quote-text {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: black;
+            margin-bottom: 0.5rem;
+        }
+
+        .quote-author {
+            color: rgba(0,0,0,0.8);
+            font-weight: bold;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .bento-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .card-main,
+            .card-experience,
+            .card-skills,
+            .card-education,
+            .card-quote {
+                grid-column: span 1;
+            }
+            
+            .social-grid {
+                grid-template-columns: 1fr;
+            }
+        }
