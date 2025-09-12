@@ -3,4 +3,4 @@
 Bento-comic themed personal portfolio website
 Made with only HTML, CSS, and ❤️
 
-![Portfolio Screenshot](assets/screenshot.png)
+![Portfolio Screenshot](assets/portfolioSS.png)
