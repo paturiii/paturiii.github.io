@@ -1,6 +1,5 @@
 ## Prithvi Paturi - Personal Portfolio
 
-Bento-comic themed personal portfolio website
-Made with only HTML, CSS, and ❤️
+Bento themed personal portfolio website
 
 ![Portfolio Screenshot](assets/portfolioSS.png)
