@@ -107,6 +107,9 @@ body {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   padding: 18px;
+  backdrop-filter: blur(22px) saturate(1.08);
+  -webkit-backdrop-filter: blur(22px) saturate(1.08);
+  box-shadow: 0 14px 36px color-mix(in srgb, var(--bg) 45%, transparent);
   transition:
     transform 0.25s ease,
     background 0.25s ease,
@@ -122,12 +125,12 @@ body {
 .experiences-box:hover {
   transform: translateY(-3px);
   background: var(--card-2);
-  border-color: rgba(255, 255, 255, 0.14);
+  border-color: color-mix(in srgb, var(--accent) 42%, transparent);
 }
 
 .resume-box:hover {
   background: var(--card-2);
-  border-color: rgba(255, 255, 255, 0.14);
+  border-color: color-mix(in srgb, var(--accent) 42%, transparent);
 }
 
 .eyebrow {
@@ -193,7 +196,7 @@ body {
 }
 
 .contact-input:focus {
-  border-color: rgba(255, 255, 255, 0.22);
+  border-color: color-mix(in srgb, var(--accent) 50%, transparent);
   background: var(--card-2);
 }
 
@@ -222,14 +225,14 @@ body {
 
 .contact-send:hover {
   background: var(--card-2);
-  border-color: rgba(255, 255, 255, 0.22);
+  border-color: color-mix(in srgb, var(--accent) 42%, transparent);
 }
 
 .contact-send:active {
   transform: scale(0.98);
 }
 
-/* ---- projects: image stack ---- */
+/* ---- projects: frosted wells ---- */
 .projects-section .grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -240,41 +243,59 @@ body {
   aspect-ratio: 1 / 1;
   border-radius: 11px;
   border: 1px solid var(--line);
+  background: var(--inner);
   display: flex;
-  align-items: flex-end;
-  padding: 10px;
-  font-size: 11px;
-  color: rgba(255, 255, 255, 0.85);
-}
-
-a.project {
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--text);
   text-decoration: none;
   transition:
     transform 0.15s ease,
-    border-color 0.15s ease;
+    border-color 0.15s ease,
+    background 0.15s ease;
 }
 
-a.project:hover {
+.project:hover {
   transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.22);
+  background: var(--card-2);
+  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
 }
 
-.project:nth-child(1) {
-  background: linear-gradient(160deg, #5c3dff 0%, #9d7dff 100%);
+.project-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--bg) 42%, transparent);
+  border: 1px solid var(--line);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
 }
-.project:nth-child(2) {
-  background: linear-gradient(160deg, #0077b6 0%, #48cae4 100%);
+
+.project-icon svg {
+  width: 16px;
+  height: 16px;
 }
-.project:nth-child(3) {
-  background: linear-gradient(160deg, #c9184a 0%, #ff6b8a 100%);
+
+.project-name {
+  max-width: 16ch;
 }
-.project:nth-child(4) {
-  background: linear-gradient(160deg, #141414 0%, #3d2f7a 100%);
+
+.project-more {
   align-items: center;
   justify-content: center;
   font-size: 15px;
   font-weight: 600;
-  color: var(--text);
+}
+
+.project-more .project-name {
+  max-width: none;
 }
 
 /* ---- link chips (resume) ---- */
